@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Jobs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="container py-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="text-gradient">💼 Jobs</h1>
+            <a href="/" class="btn btn-outline-secondary">🏠 Home</a>
+        </div>
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <table class="table table-hover table-striped">
+                    <thead class="table-warning">
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="j : ${jobs}">
+                            <td th:text="${j.id}">1</td>
+                            <td th:text="${j.title}">Developer</td>
+                            <td th:text="${j.description}">Build cool things</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="/" class="btn btn-success rounded-pill px-4">➕ Add New Job</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

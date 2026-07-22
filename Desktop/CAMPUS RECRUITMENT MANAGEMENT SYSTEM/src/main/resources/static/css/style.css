@@ -1,0 +1,35 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
+.btn-success {
+    background: linear-gradient(145deg, #43e97b, #38f9d7);
+    border: none;
+    color: #000;
+    font-weight: 600;
+}
+.btn-success:hover {
+    background: linear-gradient(145deg, #38f9d7, #43e97b);
+    color: #000;
+}
+
+table th {
+    background: linear-gradient(145deg, #f6d365, #fda085) !important;
+    color: #333 !important;
+}
